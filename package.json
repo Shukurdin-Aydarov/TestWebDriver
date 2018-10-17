@@ -1,0 +1,18 @@
+{
+  "name": "test-web-driver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules\\.bin\\mocha --opts mocha.opts tests"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.12.0",
+    "@types/selenium-webdriver": "^3.0.12",
+    "mocha": "^5.2.0",
+    "selenium-webdriver": "3.6.0"
+  }
+}
