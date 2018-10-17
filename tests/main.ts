@@ -24,7 +24,7 @@ suite("WebDriverTests", () => {
         await driver.executeAsyncScript(() => console.log('Hello!'));
     });
 
-    test("IE: execute async js", async () => {
+    test.only("IE: execute async js", async () => {
         setDriverPath();
 
         const driver = new Builder()
@@ -32,7 +32,7 @@ suite("WebDriverTests", () => {
             .build();
 
         const start = new Date().getTime();
-        await driver.executeAsyncScript('window.setTimeout(arguments[arguments.length - 1], 500);');
+        await driver.executeAsyncScript(() => window.setTimeout(()=> console.log("Hello!"), 500));
         console.log('Elapsed time: ' + (new Date().getTime() - start) + ' ms');
     });
 
